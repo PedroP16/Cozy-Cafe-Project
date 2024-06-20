@@ -1,0 +1,312 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fs-mini: 14px;
+    --fs-small: 18px;
+    --fs-medium: 24px;
+    --fs-big: 30px;
+    --fs-giant: 36px;
+
+    --clr-one: #000;
+    --clr-two: #fff;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(Inter/Inter-VariableFont_slnt\,wght.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Crimson';
+    src: url(Crimson_Text/CrimsonText-Bold.ttf);
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+/* Estilos Header */
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: var(--clr-two);
+    padding: 20px;
+    justify-content: space-between;
+    font-family: 'Inter';
+    z-index: 999;
+}
+
+header > a{
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: var(--fs-small);
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+section:nth-child(even) {
+    background-color: var(--clr-one);
+    color: var(--clr-two);
+}
+
+section:nth-child(odd) {
+    background: var(--clr-two);
+    color: var(--clr-one);
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.introduction {
+    height: 100vh;
+}
+
+.introduction .wrapper {
+    display: grid;
+    align-content: center;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.introduction__text {
+    font-family: 'Crimson';
+    font-size: var(--fs-giant);
+}
+
+.introduction__description {
+    font-family: 'Inter';
+    font-size: var(--fs-small);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description__buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.description__btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--clr-one);
+    color: var(--clr-two);
+    text-decoration: none;
+}
+
+.description__btn--white {
+    background-color: var(--clr-two);
+    color: var(--clr-one);
+    border: 1px solid var(--clr-one);
+}
+
+.divisor {
+    padding: 100px;
+}
+
+/* About Us Section Styles */
+
+.about_us .wrapper {
+    padding: 80px 20px;
+}
+
+.about_us__text {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.about_us__title {
+    font-family: 'Crimson';
+    font-size: var(--fs-big);
+    margin-bottom: 20px;
+}
+
+.about_us__description {
+    font-family: 'Inter';
+    font-size: var(--fs-small);
+    font-weight: 300;
+}
+
+
+/* Menu */
+
+.menu .wrapper {
+    padding: 50px;
+}
+
+.menu__text {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu__text>* {
+    margin-top: 15px;
+}
+
+.menu__text span {
+    background-color: var(--clr-two);
+    color: var(--clr-one);
+    padding: 5px 15px;
+    font-family: 'Inter';
+    border-radius: 7.5px;
+}
+
+.menu__text h2 {
+    font-size: var(--fs-big);
+    font-family: 'Crimson';
+}
+
+.menu__text p {
+    font-size: var(--fs-small);
+    font-family: 'Inter';
+    font-weight: 200;
+}
+
+.menu__cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu__card {
+    flex: 1 1 200px;
+    background-color: var(--clr-two);
+    color: var(--clr-one);
+    border-radius: 12.5px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.menu__card:hover{
+    scale: 1.05;
+    transition: .1s;
+}
+
+.menu__card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.menu__card_text {
+    padding: 20px;
+}
+
+.menu__card h3{
+    margin-bottom: 20px;
+}
+
+.menu__card_text h3,
+.menu__card_text h4{
+    font-family: 'Crimson';
+}
+
+.menu__card p{
+    font-family: 'Inter';
+    margin-bottom: 20px;
+}
+
+/* Contact Styles */
+
+.contact .wrapper{
+    padding: 100px 0;
+}
+
+.contact__text{
+    text-align: center;
+}
+
+.contact__text h2{
+    font-family: 'Crimson';
+    font-size: var(--fs-big);
+}
+
+.contact__text p{
+    font-family: 'Inter';
+    font-size: var(--fs-small);
+    margin-bottom: 20px;
+}
+
+.contact__form{
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact__form > *{
+    padding: 5px 15px;
+    background-color: var(--clr-one);
+    border: 1px solid var(--clr-two);
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Inter';
+}
+
+.contact__form input[type="submit"]{
+    color: var(--clr-one);
+    border-color: var(--clr-one);
+    background-color: var(--clr-two);
+}
+
+.contact__form textarea{
+    resize: none;
+}
+/* Estilos Footer */
+
+footer {
+    background-color: var(--clr-one);
+    color: var(--clr-two);
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+footer nav a {
+    text-decoration: none;
+    font-size: var(--fs-mini);
+    color: var(--clr-two);
+
+}
